@@ -5,16 +5,18 @@ import { StackNavigator } from "react-navigation";
 import { connect } from "react-redux";
 import HomePage from "../pages/HomePage";
 
-export const AppNavigator = StackNavigator({
-  HomePage: {screen: HomePage },
-}, { 
-  mode: "modal",
-  headerMode: "none",
-});
+// const AppNavigator = StackNavigator({
+//   HomePage: {screen: HomePage }
+// }, 
+// { 
+//   mode: "modal",
+//   headerMode: "none",
+// });
+
 class AppContainer extends Component {
   render() {
     return (
-      <AppNavigator/>
+      <HomePage/>
     )
   }
 }
