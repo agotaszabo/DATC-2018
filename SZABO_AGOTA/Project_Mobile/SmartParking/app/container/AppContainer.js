@@ -1,35 +1,30 @@
 //@flow
 import React, { Component } from "react";
-import { StyleSheet } from "react-native";
-import { StackNavigator } from "react-navigation";
-import { connect } from "react-redux";
+import { TabNavigator } from "react-navigation";
 import HomePage from "../pages/HomePage";
+import SettingsPage from "../pages/SettingsPage";
+import MapPage from "../pages/MapPage";
 
-// const AppNavigator = StackNavigator({
-//   HomePage: {screen: HomePage }
-// }, 
-// { 
-//   mode: "modal",
-//   headerMode: "none",
-// });
-
-class AppContainer extends Component {
-  render() {
-    return (
-      <HomePage/>
-    )
+export const Tab = TabNavigator({
+  Home: {
+    screen: HomePage,
+  },
+  First: {
+    screen: MapPage,
+  },
+  Second: {
+    screen: SettingsPage,
   }
-}
-function mapStateToProps(state) {
-  return {
-    navigationReducer: state.navigationReducer
-  };
-}
-
-export default connect(mapStateToProps)(AppContainer);
-
-const style = StyleSheet.create({
-  container: {
-    flex: 1
+}, {
+  tabBarPosition: 'bottom',
+  swipeEnabled: true,
+  tabBarOptions: {
+    activeTintColor: '#f2f2f2',
+    activeBackgroundColor: "#2EC4B6",
+    inactiveTintColor: '#666',
+    labelStyle: {
+      fontSize: 12,
+    }
   }
 });
+
