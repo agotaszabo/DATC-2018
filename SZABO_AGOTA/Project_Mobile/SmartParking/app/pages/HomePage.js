@@ -1,15 +1,15 @@
 // @flow
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { ScrollView, Text } from "react-native";
 import {General }from "../styles/Colors";
 
 export default class HomePage extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text> Homepage </Text>
-      </View>
+      <ScrollView>
+        <Text style={styles.container}> HOME PAGE </Text>
+      </ScrollView>
     )
   }
 }
@@ -17,6 +17,9 @@ export default class HomePage extends Component {
 const styles = {
   container: {
     flex:1,
-    //backgroundColor: General.red
+    fontSize: 50,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 300
   }
 }
