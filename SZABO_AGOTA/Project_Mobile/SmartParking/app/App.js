@@ -8,7 +8,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { RootReducer } from "../common/redux/reducers/RootReducer";
 import { createLogger } from "redux-logger";
 import thunkMiddleware from "redux-thunk";
-import AppContainer from "../app/container/AppContainer";
+import AppContainer, { Tab } from "../app/container/AppContainer";
 
 //for logging events made in redux
 const loggerMiddleware = createLogger({
@@ -36,9 +36,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <Provider store={this.store}>
-        <AppContainer />
-      </Provider>
+      <Tab />
     );
   }
 }
