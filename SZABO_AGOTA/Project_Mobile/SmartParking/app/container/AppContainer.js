@@ -4,27 +4,29 @@ import { TabNavigator } from "react-navigation";
 import HomePage from "../pages/HomePage";
 import SettingsPage from "../pages/SettingsPage";
 import MapPage from "../pages/MapPage";
+import { General } from "../styles/Colors";
 
 export const Tab = TabNavigator({
-  Home: {
-    screen: HomePage,
-  },
-  First: {
-    screen: MapPage,
-  },
-  Second: {
-    screen: SettingsPage,
-  }
+  Home: {screen: HomePage},
+  Map: {screen: MapPage},
+  Settings: {screen: SettingsPage}
 }, {
   tabBarPosition: 'bottom',
   swipeEnabled: true,
+  animationEnabled: true,
   tabBarOptions: {
-    activeTintColor: '#f2f2f2',
-    activeBackgroundColor: "#2EC4B6",
-    inactiveTintColor: '#666',
+    indicatorStyle: {
+      backgroundColor: General.independence
+    },
+    activeTintColor: General.sea_serpent,
+    inactiveTintColor: General.oxford_blue,
     labelStyle: {
-      fontSize: 12,
-    }
+      fontSize: 15,
+      fontWeight: '900'
+    },
+    style: {
+      backgroundColor: General.independence,
+    },
   }
 });
 
