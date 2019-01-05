@@ -1,29 +1,36 @@
 // @flow
 import React, { Component } from 'react';
-import { Button, View, ScrollView, Text } from 'react-native';
+import { Button, Dimensions, View, ScrollView, Text } from 'react-native';
 import { General } from '../styles/Colors';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import { GeneralStyle } from "../styles/Style";
+import MapView, { PROVIDER_GOOGLE, AnimatedRegion, Marker } from 'react-native-maps';
+import data from "../assets/constants";
+import MapComponent from '../components/MapComponents';
+
 
 export default class MapPage extends Component {
 	constructor(props) {
-		super(props);
+    super(props);
+    
+    // this.state = {
+		// 	coordinate: new AnimatedRegion({
+		// 		latitude: LATITUDE,
+		// 		longitude: LONGITUDE,
+		// 	}),
+		// };
 	}
 
 	render() {
 		return (
 			<View style={styles.container}>
         <ScrollView>
-          <Text style={styles.textTitle}> Map page </Text>
-					<MapView
-						provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-						style={styles.map}
-						region={{
-							latitude: 37.78825,
-							longitude: -122.4324,
-							latitudeDelta: 0.015,
-							longitudeDelta: 0.0121,
-						}}
-					/>
+          <Text style={GeneralStyle.textTitle}> Search for a parking place </Text>
+        
+          <MapComponent/>
+          
+          <Text style={GeneralStyle.textTitle}> Search for a parking place </Text>
+          <Text style={GeneralStyle.textTitle}> Search for a parking place </Text>
+
 				</ScrollView>
 			</View>
 		);
@@ -35,16 +42,12 @@ const styles = {
 		flex: 1,
 		backgroundColor: General.white,
 	},
-  textTitle: {
-    fontSize: 35,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 30,
-    color: General.oxford_blue
-  },
 	map: {
-		height: 400,
-		width: 400,
+    marginRight: 10,
+    marginLeft: 10,
+    marginTop: 30,
+		height: 350,
+		width: Dimensions.get('window').width - 20,
 		//absoluteFillObject,
 	},
 };
