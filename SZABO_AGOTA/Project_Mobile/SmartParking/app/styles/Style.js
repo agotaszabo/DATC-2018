@@ -20,7 +20,25 @@ let GeneralStyle = {
       marginRight: 15,
       marginLeft: 15,
       color: General.oxford_blue
-    }
+    },
+    textLink: {
+      fontSize: 15,
+      fontWeight: 'normal',
+      textAlign: 'center',
+      marginTop: 30,
+      marginRight: 15,
+      marginLeft: 15,
+      color: General.sea_serpent
+    },
+    textList: {
+      fontSize: 15,
+      fontWeight: 'normal',
+      textAlign: 'center',
+      marginTop: 10,
+      marginRight: 15,
+      marginLeft: 15,
+      color: General.oxford_blue
+    },
   };
   
   
