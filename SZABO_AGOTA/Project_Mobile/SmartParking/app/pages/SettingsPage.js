@@ -33,7 +33,7 @@ export default class HomePage extends Component {
           
           <Text style={GeneralStyle.textList}>{data.SettingsPage.Text6}</Text>
           <Text style={GeneralStyle.textList}>{data.SettingsPage.Text7}</Text>
-          <Text style={GeneralStyle.textList}>{data.SettingsPage.Text8}</Text>
+          <Text style={[{ marginBottom: 15}, GeneralStyle.textList]}>{data.SettingsPage.Text8}</Text>
           
         </ScrollView>
       </View>
@@ -44,6 +44,6 @@ export default class HomePage extends Component {
 const styles = {
   container: {
     flex:1,
-    backgroundColor: General.white
+    backgroundColor: General.white,
   }
 }
