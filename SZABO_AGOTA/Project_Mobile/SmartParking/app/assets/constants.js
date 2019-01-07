@@ -6,11 +6,12 @@ module.exports = {
     },
 
     MapPageCoordinates: {
-      P1_lat: 45.753747,
-      P1_long: 21.227239,
-
-      P2_lat: 45.753755,
-      P2_long: 21.227120,
+      LATITUDE: 45.753733,
+      LONGITUED: 21.226926,
+      LATITUDE_DELTA: 0.001,
+      LONGITUDE_DELTA: 0.001,
+      
+      Title: "Modex Parking",
 
       P3_lat: 45.753769,
       P3_long: 21.226998,
@@ -58,4 +59,23 @@ module.exports = {
       Text7: 'ROȘCA ALEXANDRU-MIRCEA - Hardware and backend developer', 
       Text8: 'SZABÓ ÁGOTA-HELLA - Backend and mobile developer',
     },
+
+    markers: [
+      {
+        title: 'P1',
+        state: false,
+        coordinates: {
+          latitude: 45.753747,
+          longitude: 21.227239
+        }
+      },
+      {
+        title: 'P2',
+        state: true,
+        coordinates: {
+          latitude: 45.753755,
+          longitude: 21.227120
+        }  
+      }
+    ]
   };

@@ -2,17 +2,15 @@
 import React, { Component } from 'react';
 import { Button, Dimensions, View, ScrollView, Text } from 'react-native';
 import { General } from '../styles/Colors';
-import { GeneralStyle } from "../styles/Style";
-import MapView, { PROVIDER_GOOGLE, AnimatedRegion, Marker } from 'react-native-maps';
-import data from "../assets/constants";
+import { GeneralStyle } from '../styles/Style';
 import MapComponent from '../components/MapComponents';
-
+import data from '../assets/constants';
 
 export default class MapPage extends Component {
 	constructor(props) {
-    super(props);
-    
-    // this.state = {
+		super(props);
+
+		// this.state = {
 		// 	coordinate: new AnimatedRegion({
 		// 		latitude: LATITUDE,
 		// 		longitude: LONGITUDE,
@@ -23,14 +21,9 @@ export default class MapPage extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-        <ScrollView>
-          <Text style={GeneralStyle.textTitle}> Search for a parking place </Text>
-        
-          <MapComponent/>
-          
-          <Text style={GeneralStyle.textTitle}> Search for a parking place </Text>
-          <Text style={GeneralStyle.textTitle}> Search for a parking place </Text>
-
+				<ScrollView>
+					<Text style={GeneralStyle.textTitle}> {data.MapPageCoordinates.Title} </Text>
+					<MapComponent />
 				</ScrollView>
 			</View>
 		);
@@ -43,9 +36,9 @@ const styles = {
 		backgroundColor: General.white,
 	},
 	map: {
-    marginRight: 10,
-    marginLeft: 10,
-    marginTop: 30,
+		marginRight: 10,
+		marginLeft: 10,
+		marginTop: 30,
 		height: 350,
 		width: Dimensions.get('window').width - 20,
 		//absoluteFillObject,
