@@ -23,6 +23,7 @@ export default class MapComponent extends Component {
 				<MapView
 					provider={PROVIDER_GOOGLE} // remove if not using Google Maps
 					style={styles.map}
+					loadingEnabled={true}
 					region={{
 						latitude: data.MapPageCoordinates.LATITUDE,
 						longitude: data.MapPageCoordinates.LONGITUED,
@@ -45,7 +46,15 @@ export default class MapComponent extends Component {
 					))}
 				</MapView>
 
-				<Text>{this.state.isPressed ? this.state.MarkerName + '\n' + this.state.MarkerDescription : ' '}</Text>
+					{this.state.isPressed 
+					? (
+						<View>
+						<Text style={[{marginTop: 10}, styles.detailsText]}>{"Parking space name: " + this.state.MarkerName}</Text>
+						<Text style={styles.detailsText}>Details: </Text>
+						<Text style={styles.detailsText}>{"\t\t" + this.state.MarkerDescription}</Text>
+						</View>
+					) : null}
+					
 			</View>
 		);
 	}
@@ -62,5 +71,21 @@ const styles = {
 		marginTop: 10,
 		height: 350,
 		width: Dimensions.get('window').width - 20,
+	},
+	detailsView: {
+		// padding: 2.5,
+		marginLeft: 5,
+		marginRight: 5,
+		// color: General.oxford_blue,
+		// backgroundColor: General.sea_serpent,
+		borderColor: General.deep_koamaru,
+        borderWidth: 1
+	},
+	detailsText: {
+		marginLeft: 10,
+		marginright: 10,
+		fontSize: 15,
+		fontWeight: 'normal',
+		color: General.oxford_blue
 	}
 };
