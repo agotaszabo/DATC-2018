@@ -18,9 +18,10 @@ export default class HomePage extends Component {
         <Text style={GeneralStyle.textTitle}> {data.HomePage.Title} </Text>
         <Text style={GeneralStyle.textDescription}>{data.HomePage.Text1}</Text>
         <Text style={GeneralStyle.textDescription}>{data.HomePage.Text2}</Text>
-        <Image source={{uri: 'https://media.giphy.com/media/3oKGzApIBl3UyNo7Cw/giphy.gif'}} style={{width: 300, height:300, alignSelf: "center" }} />
+        <Image source={require('../assets/giphy.gif')} style={{width: 300, height:300, resizeMode: "center" }} />
         </ScrollView>
       </View>
+    
     )
   }
 }
