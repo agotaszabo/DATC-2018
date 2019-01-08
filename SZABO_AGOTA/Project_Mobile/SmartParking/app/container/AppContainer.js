@@ -9,7 +9,7 @@ import { General } from "../styles/Colors";
 export const Tab = TabNavigator({
   Home: {screen: HomePage},
   Map: {screen: MapPage},
-  Settings: {screen: SettingsPage}
+  About: {screen: SettingsPage}
 }, {
   tabBarPosition: 'bottom',
   swipeEnabled: true,

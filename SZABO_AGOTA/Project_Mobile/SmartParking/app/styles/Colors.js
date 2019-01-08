@@ -7,7 +7,9 @@ let General = {
     deep_koamaru: "#27476E",
     oxford_blue: "#001D4A",
     independence: "#3A506B",
-    sea_serpent: "#5BC0BE"
+    sea_serpent: "#5BC0BE",
+    red: "#ff0000",
+    green: "#00ff00"
   };
   
   export {
