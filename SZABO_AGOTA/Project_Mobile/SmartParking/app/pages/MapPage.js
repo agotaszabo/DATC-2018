@@ -9,13 +9,6 @@ import data from '../assets/constants';
 export default class MapPage extends Component {
 	constructor(props) {
 		super(props);
-
-		// this.state = {
-		// 	coordinate: new AnimatedRegion({
-		// 		latitude: LATITUDE,
-		// 		longitude: LONGITUDE,
-		// 	}),
-		// };
 	}
 
 	render() {
@@ -41,6 +34,5 @@ const styles = {
 		marginTop: 30,
 		height: 350,
 		width: Dimensions.get('window').width - 20,
-		//absoluteFillObject,
 	},
 };
