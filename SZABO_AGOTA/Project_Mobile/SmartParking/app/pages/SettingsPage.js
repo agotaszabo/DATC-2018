@@ -5,7 +5,7 @@ import {General }from "../styles/Colors";
 import {GeneralStyle} from "../styles/Style";
 import data from "../assets/constants";
 
-export default class HomePage extends Component {
+export default class SettingsPage extends Component {
   constructor(props) {
     super(props);
   }
