@@ -7,7 +7,7 @@ module.exports = {
 
     MapPageCoordinates: {
       LATITUDE: 45.753733,
-      LONGITUED: 21.226926,
+      LONGITUDE: 21.226926,
       LATITUDE_DELTA: 0.001,
       LONGITUDE_DELTA: 0.001,
       
