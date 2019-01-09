@@ -15,7 +15,7 @@ export default class MapPage extends Component {
 		return (
 			<View style={styles.container}>
 				<ScrollView>
-					<Text style={GeneralStyle.textTitle}> {data.MapPageCoordinates.Title} </Text>
+					<Text style={[GeneralStyle.textTitle, {marginBottom: 20}]}> {data.MapPageCoordinates.Title} </Text>
 					<MapComponent />
 				</ScrollView>
 			</View>
