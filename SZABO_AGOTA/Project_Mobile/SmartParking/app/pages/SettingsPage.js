@@ -20,12 +20,12 @@ export default class SettingsPage extends Component {
           <Text style={GeneralStyle.textDescription}>{texts.SettingsPage.Text2}</Text>
           
           <Text style={GeneralStyle.textLink} 
-            onPress={() => Linking.openURL('mailto:agotaszabo@live.com?subject=Send Suggestions') } title="agotaszabo@live.com">
+            onPress={() => Linking.openURL('mailto:agotaszabo@live.com?subject=Send suggestions') } title="agotaszabo@live.com">
             {texts.SettingsPage.Text3}
           </Text>
 
           <Text style={GeneralStyle.textLink} 
-            onPress={() => Linking.openURL('mailto:agotaszabo@live.com?subject=Report Problem') } title="agotaszabo@live.com">
+            onPress={() => Linking.openURL('mailto:agotaszabo@live.com?subject=Report a problem') } title="agotaszabo@live.com">
             {texts.SettingsPage.Text4}
           </Text>
 
@@ -35,7 +35,6 @@ export default class SettingsPage extends Component {
           <Text style={GeneralStyle.textList}>{texts.SettingsPage.Text6}</Text>
           <Text style={GeneralStyle.textList}>{texts.SettingsPage.Text7}</Text>
           <Text style={[{ marginBottom: 15}, GeneralStyle.textList]}>{texts.SettingsPage.Text8}</Text>
-        
 
         </ScrollView>
       </View>
