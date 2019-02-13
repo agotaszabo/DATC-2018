@@ -9,20 +9,13 @@ import data from '../assets/constants';
 export default class MapPage extends Component {
 	constructor(props) {
 		super(props);
-
-		// this.state = {
-		// 	coordinate: new AnimatedRegion({
-		// 		latitude: LATITUDE,
-		// 		longitude: LONGITUDE,
-		// 	}),
-		// };
 	}
 
 	render() {
 		return (
 			<View style={styles.container}>
 				<ScrollView>
-					<Text style={GeneralStyle.textTitle}> {data.MapPageCoordinates.Title} </Text>
+					<Text style={[GeneralStyle.textTitle, {marginBottom: 20}]}> {data.MapPageCoordinates.Title} </Text>
 					<MapComponent />
 				</ScrollView>
 			</View>
@@ -41,6 +34,5 @@ const styles = {
 		marginTop: 30,
 		height: 350,
 		width: Dimensions.get('window').width - 20,
-		//absoluteFillObject,
 	},
 };
